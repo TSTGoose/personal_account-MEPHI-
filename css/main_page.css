@@ -1,0 +1,272 @@
+
+.main-page-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+@media screen and (max-width: 768px){
+    .main-page-wrapper{
+        flex-direction: column-reverse;
+    }
+}
+
+.page-navigation{
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.page-navigation__fast-buttons-wrapper{
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px){
+    .page-navigation__fast-buttons-wrapper{
+        flex-wrap: wrap;
+    }
+}
+
+
+.page-navigation__fast-buttons{
+    border-radius: 20px;
+    padding: 8px;
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.25);
+}
+
+.fast-button{
+    display: flex;
+    align-items: end;
+    height: 130px;
+    width: 100%;
+    max-width: 328px;
+    min-width: 178px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    background: linear-gradient(134deg, rgba(67, 155, 255, 0.44) 16%, rgba(229, 102, 255, 0.44) 78.5%), url("../img/button_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: 0.2s ease all;
+}
+
+.fast-button:hover{
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 1024px){
+    .fast-button{
+        max-width: 49%;
+    }
+}
+
+@media screen and (max-width: 416px){
+    .fast-button{
+        max-width: 100%;
+    }
+}
+
+.fast-button__header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 46px;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    background: rgba(36, 51, 65, 0.52);
+}
+
+.buttons__button-sections{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.button-section{
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.25);
+    padding: 8px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons .button{
+    display: block;
+    padding: 8px 16px;
+    background: #e9e9e9;
+    font-weight: 700;
+    font-size: 16px;
+    color: #636363;
+    transition: 0.2s ease all;
+}
+
+.buttons .button:hover{
+    background: #adadad;
+}
+
+@media screen and (max-width: 1024px){
+    .buttons .button{
+        padding: 16px;
+    }
+}
+
+/* Персональная информация */
+
+.person-information{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 360px;
+    width: 100%;
+}
+
+.section-header{
+    display: flex;
+    align-items: center;
+    height: 22px;
+    margin-bottom: 8px;
+}
+
+.section-header span{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.console__messages{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #2B2C32;
+    padding: 8px;
+    font-weight: 300;
+    font-size: 12px;
+    color: white;
+}
+
+.status-ok{
+    color: #ADF89E;
+}
+
+.status-warning{
+    color: #F8E39E;
+}
+
+.status-alert{
+    color: rgb(255, 111, 111);
+}
+
+.person-information__person{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.person__avatar{
+    width: inherit;
+}
+.person_avatar img, #person-information-avatar{
+    width: 100%;
+}
+
+.basic-container-style{
+    flex: 1 1 100%;
+    padding: 8px;
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.25);
+}
+
+.link-button{
+    padding: 4px 0px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    background: #2d9aff;
+    transition: 0.2s ease all;
+}
+
+.main-info-item{
+    border-bottom: 1px solid #cecece;
+    padding: 4px 0px;
+    color: #393939;
+}
+
+#fio-value{
+    font-weight: bold;
+}
+
+.other-service-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+@media screen and (max-width: 1024px){
+    .person-information{
+        flex: 1 1 72%;
+    }
+    .link-button{
+        padding: 16px;
+        box-sizing: border-box;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .person-information{
+        max-width: 100%;
+    }
+    
+    .person-information__person{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .person__main-info{
+        flex: 1 1 72%;
+    }
+
+    .person__avatar{
+        max-width: 212px;
+    }
+
+    .link-button{
+        padding: 16px;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 468px){
+    .person-information{
+        width: 100%;
+    }
+    
+    .person-information__person{
+        flex-direction: column;
+    }
+
+    .avatarNdbutton{
+        width: 100%;
+    }
+
+    .person__main-info{
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .person__avatar, .avatar{
+        max-width: 100%;
+    }
+}
+
+.link-button:hover{
+    background-color: #87c5ff;
+}
